@@ -1,0 +1,8 @@
+# Dev Log week 1 (3/25 - 4/1)
+This week, our original plan was to edit our proposal and resubmit onto github and to start collecting data and constructing a graph from the data that we were going to use. However, we had to make significant changes to our original project proposal. 
+
+Originally, we had planned to use a dataset of all the connections between Twitch streamers that stream in the same language. However, the problem with this dataset is that the weight between every edge was 1 and there was no point in implementing Dijkstra’s algorithm for an unweighted graph. Therefore, we decided to change our dataset to the OpenFlight dataset in which the weight of each edge would simply be the geographic distance between two airports. Now, with a weighted graph, implementing Dijkstra’s would make a whole lot more sense. 
+
+Another problem that we faced was originally we had wanted to implement a complete graph detection algorithm. However, after input from the TA and more research into such an algorithm, we realized that coding it would be much more complicated than we had originally imagined. We ended up scratching that algorithm and opting for another algorithm that made a lot more sense in the context of OpenFlights: the Landmark Path algorithm. This algorithm would find the shortest distance from one node to another that passes through a given node. This makes a lot of sense in the context of flying from one county to another but wanting to layover in a third country.
+
+Our goals for next week include data collection and creating a weighted graph based on the data that we are using.
